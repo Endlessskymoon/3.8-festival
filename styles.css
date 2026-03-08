@@ -1,0 +1,50 @@
+:root{
+  --bg1:#FFD6E0;
+  --bg2:#FFF1F8;
+  --accent:#FF6B9A;
+  --card:#ffffffcc;
+  --accent-strong:#ff3c7a;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:"Noto Sans SC", "Segoe UI", "Helvetica Neue", Arial, sans-serif;color:#333}
+body{background:linear-gradient(135deg,var(--bg1),var(--bg2));display:flex;align-items:center;justify-content:center;padding:24px}
+.page{width:100%;max-width:960px}
+.hero{text-align:center;margin-bottom:18px}
+.hero h1{font-size:2.1rem;margin:0;color:var(--accent)}
+.subtitle{margin:6px 0;color:#666}
+.jumping-text{display:flex;justify-content:center;gap:6px;font-size:2.8rem;font-family:'ZCOOL KuaiLe', 'Comic Sans MS', cursive;margin-top:12px;color:var(--accent-strong)}
+.jumping-text span{display:inline-block;animation:jump 1.6s ease-in-out infinite;transform-origin:bottom;color:var(--accent-strong);text-shadow:0 6px 18px rgba(255,60,122,0.35)}
+.jumping-text span:nth-child(2n){color:#ff8fb3}
+.jumping-text span:nth-child(1){animation-delay:0s}
+.jumping-text span:nth-child(2){animation-delay:0.1s}
+.jumping-text span:nth-child(3){animation-delay:0.2s}
+.jumping-text span:nth-child(4){animation-delay:0.3s}
+.jumping-text span:nth-child(5){animation-delay:0.4s}
+.jumping-text span:nth-child(6){animation-delay:0.5s}
+.jumping-text span:nth-child(7){animation-delay:0.6s}
+.jumping-text span:nth-child(8){animation-delay:0.7s}
+.card{display:flex;gap:20px;background:var(--card);padding:18px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,0.08);align-items:center}
+.left img{width:320px;max-width:40vw;height:auto;border-radius:10px;border:6px solid rgba(255,255,255,0.6);box-shadow:0 6px 20px rgba(0,0,0,0.08)}
+.right{flex:1}
+.message{font-size:1.1rem;line-height:1.6;margin:0 0 12px}
+.btn{background:var(--accent);color:white;border:none;padding:10px 14px;border-radius:8px;font-size:1rem;cursor:pointer;margin-right:8px;margin-bottom:8px}
+.btn.ghost{background:transparent;color:var(--accent);border:2px solid rgba(255,107,154,0.16)}
+.qr{margin-top:6px;padding:12px;border:1px dashed rgba(255,107,154,0.4);border-radius:10px;text-align:center;background:rgba(255,255,255,0.7)}
+.qr img{width:200px;height:200px;object-fit:contain;margin-top:8px}
+.qr-floating{position:fixed;right:24px;bottom:24px;width:min(280px,82vw);background:var(--card);border-radius:18px;padding:20px;box-shadow:0 15px 40px rgba(0,0,0,0.12);backdrop-filter:blur(12px);display:flex;flex-direction:column;align-items:stretch;z-index:5}
+.qr-floating .btn{margin-right:0}
+.qr-floating .qr{margin-top:12px}
+.foot{text-align:center;margin-top:14px;color:#6b6b6b;font-size:0.9rem}
+#confetti{position:fixed;left:0;top:0;pointer-events:none}
+
+/* 小爱心样式（由 JS 注入） */
+.heart{position:fixed;font-size:20px;pointer-events:none;transform:translate(-50%,-50%);animation:rise 2.2s ease-out forwards}
+@keyframes rise{0%{opacity:1;transform:translate(-50%,0) scale(0.9)}100%{opacity:0;transform:translate(-50%,-140px) scale(1.2)}}
+@keyframes jump{0%{transform:translateY(0) scale(1)}40%{transform:translateY(-16px) scale(1.05)}70%{transform:translateY(2px) scale(0.98)}100%{transform:translateY(0) scale(1)}}
+
+@media (max-width:720px){
+  .card{flex-direction:column}
+  .left img{max-width:80vw}
+  .qr img{width:60vw;height:auto}
+  .qr-floating{left:50%;transform:translateX(-50%);right:auto;width:90vw;bottom:16px;padding:16px}
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>3·8 妇女节快乐 — 给妈妈的惊喜</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <h1>3·8 妇女节快乐，亲爱的妈妈！</h1>
+      <p class="subtitle">感谢您一直的付出与爱 — 今天为您庆祝</p>
+      <div class="jumping-text" aria-label="3.8妇女节快乐">
+        <span>3</span>
+        <span>.</span>
+        <span>8</span>
+        <span>妇</span>
+        <span>女</span>
+        <span>节</span>
+        <span>快</span>
+        <span>乐</span>
+      </div>
+    </header>
+
+    <main class="card">
+      <div class="left">
+          <img id="photo" src="assets/mom-photo.jpg" alt="给妈妈的照片">
+      </div>
+      <div class="right">
+        <p class="message">亲爱的妈妈：<br>愿您每天都被温柔相待，笑口常开。爱您的孩子。</p>
+        <button id="surpriseBtn" class="btn">给妈妈一个惊喜 ✨</button>
+      </div>
+    </main>
+
+    <canvas id="confetti"></canvas>
+
+    <footer class="foot">提示：若要换另一张照片，只需将图片文件放到 `assets` 文件夹并修改上方图片的 `src` 属性。</footer>
+  </div>
+
+  <div class="qr-floating">
+    <button id="qrBtn" class="btn ghost">生成微信二维码</button>
+    <div id="qrPanel" class="qr" hidden>
+      <p>微信扫一扫，即可在手机上打开这个页面</p>
+      <img id="qrImage" alt="网页二维码">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
